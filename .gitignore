@@ -1,0 +1,17 @@
+.idea
+Back-end/venv
+*.pyc
+__pycache__
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.swp
+*.DS_Store
+*.egg-info
+*.vscode
+pipfile.lock
+pipfile
+*.env
+*.venv

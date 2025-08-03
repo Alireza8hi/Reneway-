@@ -1,0 +1,60 @@
+body {
+  direction: rtl;
+  margin: 0;
+  font-family: vazir, shabnam, yekan, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 18%,
+    rgba(24, 0, 28, 1) 100%
+  );
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "yekan";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/yekan-font/Yekan.eot");
+  src: url("./fonts/yekan-font/Yekan.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/yekan-font/Yekan.woff") format("woff"),
+    url("./fonts/yekan-font/Yekan.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "vazir";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/vazir-font-v18.0.0/Vazir.eot");
+  src: url("./fonts/vazir-font-v18.0.0/Vazir.eot") format("embedded-opentype"),
+    url("./fonts/vazir-font-v18.0.0/Vazir.woff") format("woff"),
+    url("./fonts/vazir-font-v18.0.0/Vazir.ttf") format("truetype");
+}
+@font-face {
+  font-family: "shabnam";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/shabnam-font-v2.4.0/Shabnam.eot");
+  src: url("./fonts/shabnam-font-v2.4.0/Shabnam.eot")
+      format("embedded-opentype"),
+    url("./fonts/shabnam-font-v2.4.0/Shabnam.woff") format("woff"),
+    url("./fonts/shabnam-font-v2.4.0/Shabnam.ttf") format("truetype");
+}
+
+.gradient-custome {
+  background: rgb(242, 255, 63);
+  background: linear-gradient(
+    90deg,
+    rgba(242, 255, 63, 1) 0%,
+    rgba(253, 81, 29, 1) 46%,
+    rgba(119, 98, 214, 1) 100%
+  );
+}

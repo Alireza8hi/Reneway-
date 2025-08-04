@@ -1,0 +1,51 @@
+name: backend
+services:
+  backend_mysql:
+    image: mysql:8.0
+    container_name: backend_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 8a8l8i8r8e8z8a8
+      MYSQL_DATABASE: shop
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - app-network
+
+  backend_django:
+    build: ./Back-end
+    container_name: backend_django
+    command: >
+      sh -c "sleep 10 &&
+            python manage.py migrate &&
+            python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./Back-end:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - backend_mysql
+    networks:
+      - app-network
+
+  frontend_react:
+    build: ./Front-end
+    container_name: frontend_react
+    volumes:
+      - ./Front-end:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend_django
+    networks:
+      - app-network
+
+volumes:
+  mysql_data:
+
+networks:
+  app-network:

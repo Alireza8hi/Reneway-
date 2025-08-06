@@ -8,7 +8,7 @@ export function register(user) {
     username: user.username,
     password: user.password,
     email: user.email,
-    is_business: user.isBusiness,
+    is_business: false,
     phone: user.phoneNumber,
     national_id: user.nationalCode,
     address: user.address,
